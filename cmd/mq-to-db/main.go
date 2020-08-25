@@ -260,15 +260,6 @@ func main() {
 		}
 	}()
 
-	// log.Printf("Creating workers pool: %s, with: %d workers", conf.Application.Name, conf.Consumer.Workers)
-	// cPool := worker.NewPool(appCtx, &wg, conf.Consumer.Workers, conf.Application.Name)
-
-	// log.Print("Connecting consuming function to workers poll")
-	// cPool.ConsumeFrom(qc.Consume)
-
-	// Here the main is blocked until doesn't receive a OS Signals
-	// This is blocking the func main() routine until chan osSignal receive a value inside
-
 	<-osSignal
 	log.Warn("Stoping workers...")
 
