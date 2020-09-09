@@ -16,3 +16,4 @@ vendor/
 
 ./mq-to-db
 main
+.history
